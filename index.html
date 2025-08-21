@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belle Fleur - Art Floral d'Exception</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <!-- Navigation -->
+    <nav id="navigation" class="navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo" onclick="navigateTo('accueil')">
+                    <span class="logo-icon">🌸</span>
+                    <span class="logo-text">Quaie des Fleurs</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <button class="nav-item" data-page="accueil">Accueil</button>
+                    <button class="nav-item" data-page="portfolio">Portfolio</button>
+                    <button class="nav-item" data-page="atelier">Atelier</button>
+                    <button class="nav-item" data-page="services">Services</button>
+                    <button class="nav-item" data-page="contact">Contact</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <button class="mobile-nav-item" data-page="accueil">Accueil</button>
+                <button class="mobile-nav-item" data-page="portfolio">Portfolio</button>
+                <button class="mobile-nav-item" data-page="atelier">Atelier</button>
+                <button class="mobile-nav-item" data-page="services">Services</button>
+                <button class="mobile-nav-item" data-page="contact">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+     <main id="main-content" class="main-content">
+        <!-- PAGE ACCUEIL -->
+        <div id="page-accueil" class="page active">
+            <!-- Hero Section -->
+            <section class="hero-section hero-animate">
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1707507758211-f6ca8e96e563?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwZWxlZ2FudCUyMGZsb3dlciUyMGFycmFuZ2VtZW50JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc1NTc4MzgwM3ww&ixlib=rb-4.1.0&q=80&w=1080" 
+                         alt="Arrangement floral élégant" class="hero-image">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-sparkles">✨</div>
+                    <h1 class="hero-title">
+                        L'art floral<br>
+                        <em>réinventé</em>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Créations florales d'exception où chaque pétale raconte une histoire,
+                        chaque arrangement révèle une émotion.
+                    </p>
+                    <button class="hero-cta" onclick="navigateTo('portfolio')">
+                        Découvrir nos créations
+                    </button>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </section>
+
+            <!-- Philosophy Section -->
+            <section class="philosophy-section">
+                <div class="container">
+                    <div class="philosophy-content">
+                        <h2 class="section-title">Notre philosophie</h2>
+                        <div class="philosophy-grid">
+                            <div class="philosophy-item">
+                                <div class="philosophy-icon">🎨</div>
+                                <h3>Créativité</h3>
+                                <p>Chaque création est une œuvre unique, inspirée par la beauté naturelle et l'innovation artistique.</p>
+                            </div>
+                            <div class="philosophy-item">
+                                <div class="philosophy-icon">🌿</div>
+                                <h3>Authenticité</h3>
+                                <p>Nous privilégions des fleurs de saison, cultivées avec respect pour préserver leur essence naturelle.</p>
+                            </div>
+                            <div class="philosophy-item">
+                                <div class="philosophy-icon">✨</div>
+                                <h3>Excellence</h3>
+                                <p>Chaque détail compte dans notre quête de perfection, de la conception à la réalisation finale.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Prêt à donner vie à vos idées ?</h2>
+                        <p class="cta-subtitle">
+                            Explorez notre univers créatif et découvrez comment nous transformons 
+                            vos émotions en arrangements floraux exceptionnels.
+                        </p>
+                        <div class="cta-buttons">
+                            <button class="btn-primary" onclick="navigateTo('portfolio')">
+                                Voir notre portfolio
+                            </button>
+                            <button class="btn-secondary" onclick="navigateTo('contact')">
+                                Nous contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PAGE PORTFOLIO -->
+        <div id="page-portfolio" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Notre Portfolio</h1>
+                    <p class="page-subtitle">
+                        Découvrez nos créations les plus remarquables, où chaque arrangement 
+                        témoigne de notre passion pour l'art floral et notre quête d'excellence.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Portfolio Filters -->
+            <section class="portfolio-filters">
+                <div class="container">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Toutes</button>
+                        <button class="filter-btn" data-filter="mariage">Mariages</button>
+                        <button class="filter-btn" data-filter="evenement">Événements</button>
+                        <button class="filter-btn" data-filter="contemporain">Contemporain</button>
+                        <button class="filter-btn" data-filter="saisonnier">Saisonnier</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Grid -->
+            <section class="portfolio-grid-section">
+                <div class="container">
+                    <div class="portfolio-grid" id="portfolio-grid">
+                        <div class="portfolio-item large" data-category="contemporain">
+                            <img src="https://images.unsplash.com/photo-1589484399863-b24ad031fa5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmbG93ZXIlMjBhcnJhbmdlbWVudCUyMHdoaXRlJTIwYmFja2dyb3VuZHxlbnwxfHx8fDE3NTU3ODM4Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Harmonie Luxueuse">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Harmonie Luxueuse</h3>
+                                    <p>Arrangement moderne aux lignes épurées, jouant sur les contrastes de textures.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item medium" data-category="contemporain">
+                            <img src="https://images.unsplash.com/photo-1536640217560-1085f2c1bcdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmbG9yYWwlMjBkZXNpZ24lMjBjb250ZW1wb3Jhcnl8ZW58MXx8fHwxNzU1NzgzODQyfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Design Contemporain">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Design Contemporain</h3>
+                                    <p>Création florale avant-gardiste inspirée de l'architecture moderne.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item medium" data-category="mariage">
+                            <img src="https://images.unsplash.com/photo-1683248891051-ae8d7e7892f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwYnJpZGFsJTIwYm91cXVldCUyMGVsZWdhbnR8ZW58MXx8fHwxNzU1NzgzODQ1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Bouquet de Mariée">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Bouquet de Mariée Éternel</h3>
+                                    <p>Composition romantique aux nuances douces pour un jour inoubliable.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item small" data-category="contemporain">
+                            <img src="https://images.unsplash.com/photo-1672725063452-5f0115853ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZmxvd2VyJTIwY29tcG9zaXRpb24lMjBzdHVkaW98ZW58MXx8fHwxNzU1NzgzODQ4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Pureté Minimaliste">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Pureté Minimaliste</h3>
+                                    <p>L'essence de la beauté florale dans sa forme la plus épurée.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item large" data-category="evenement">
+                            <img src="https://images.unsplash.com/photo-1662825182460-d74a861f8c65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpc3RpYyUyMGZsb3dlciUyMGFycmFuZ2VtZW50JTIwc2N1bHB0dXJlfGVufDF8fHx8MTc1NTc4Mzg1M3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Sculpture Florale">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Sculpture Florale</h3>
+                                    <p>Installation artistique monumentale pour événement d'exception.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item medium" data-category="saisonnier">
+                            <img src="https://images.unsplash.com/photo-1683248890730-84eed57d7b2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWFzb25hbCUyMGZsb3dlciUyMGFycmFuZ2VtZW50JTIwc3ByaW5nfGVufDF8fHx8MTc1NTc4Mzg1Nnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Éveil Printanier">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Éveil Printanier</h3>
+                                    <p>Célébration de la renaissance florale avec des couleurs tendres.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PAGE ATELIER -->
+        <div id="page-atelier" class="page">
+            <!-- Hero Atelier -->
+            <section class="atelier-hero">
+                <div class="atelier-hero-image">
+                    <img src="https://images.unsplash.com/photo-1630638915293-4cb45bb06c8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmbG9yaXN0JTIwd29ya3Nob3AlMjBzdHVkaW8lMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzU1NzgzOTA2fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Atelier fleuriste">
+                    <div class="atelier-hero-overlay"></div>
+                </div>
+                <div class="atelier-hero-content">
+                    <h1 class="atelier-hero-title">
+                        Dans les coulisses<br>
+                        <em>de la création</em>
+                    </h1>
+                    <p class="atelier-hero-subtitle">
+                        Découvrez l'univers de notre atelier où naissent nos créations florales. 
+                        Un voyage au cœur de notre processus créatif, de l'inspiration à la réalisation.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="process-section">
+                <div class="container">
+                    <div class="process-header">
+                        <h2 class="section-title">Notre processus créatif</h2>
+                        <p class="section-subtitle">
+                            Chaque création suit un parcours minutieux, où l'émotion guide nos gestes 
+                            et la technique sublime l'art floral.
+                        </p>
+                    </div>
+                    
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="process-number">01</div>
+                            <div class="process-icon">💖</div>
+                            <h3>Inspiration</h3>
+                            <p>Chaque création naît d'une émotion, d'un moment, d'une histoire unique à raconter.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-number">02</div>
+                            <div class="process-icon">🎨</div>
+                            <h3>Conception</h3>
+                            <p>Nous esquissons et visualisons chaque arrangement avant de passer à la création.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-number">03</div>
+                            <div class="process-icon">✂️</div>
+                            <h3>Réalisation</h3>
+                            <p>Nos mains expertes donnent vie à la vision, pétale par pétale, avec précision.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-number">04</div>
+                            <div class="process-icon">⏰</div>
+                            <h3>Finition</h3>
+                            <p>Chaque détail est peaufiné pour atteindre la perfection absolue.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon">👥</div>
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Années d'expérience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">💖</div>
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Créations uniques</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🏆</div>
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Événements d'exception</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">⏰</div>
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">Fraîcheur garantie</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PAGE SERVICES -->
+        <div id="page-services" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Nos Services</h1>
+                    <p class="page-subtitle">
+                        De l'événement d'exception à la décoration quotidienne, nous mettons notre expertise 
+                        au service de vos projets les plus ambitieux comme les plus intimes.
+                    </p>
+                </div>
+            </section>
+
+            <section class="services-grid-section">
+                <div class="container">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">💖</div>
+                                <div class="service-title-group">
+                                    <h3>Mariages</h3>
+                                    <p class="service-subtitle">Votre jour J sublimé</p>
+                                </div>
+                            </div>
+                            <p class="service-description">
+                                Nous créons l'atmosphère florale parfaite pour votre union, de la cérémonie à la réception.
+                            </p>
+                            <ul class="service-features">
+                                <li>Bouquet de mariée sur mesure</li>
+                                <li>Boutonnières et corsages</li>
+                                <li>Centres de table élégants</li>
+                                <li>Décoration de cérémonie</li>
+                                <li>Arche florale personnalisée</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="service-price">À partir de 800€</span>
+                                <button class="service-btn">En savoir plus</button>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">🏢</div>
+                                <div class="service-title-group">
+                                    <h3>Événements Corporatifs</h3>
+                                    <p class="service-subtitle">Excellence professionnelle</p>
+                                </div>
+                            </div>
+                            <p class="service-description">
+                                Nos créations florales transforment vos espaces professionnels et événements d'entreprise.
+                            </p>
+                            <ul class="service-features">
+                                <li>Accueil et réception</li>
+                                <li>Décoration de stands</li>
+                                <li>Arrangements de bureaux</li>
+                                <li>Événements de prestige</li>
+                                <li>Installations temporaires</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="service-price">À partir de 300€</span>
+                                <button class="service-btn">En savoir plus</button>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">📅</div>
+                                <div class="service-title-group">
+                                    <h3>Événements Privés</h3>
+                                    <p class="service-subtitle">Moments inoubliables</p>
+                                </div>
+                            </div>
+                            <p class="service-description">
+                                Anniversaires, baptêmes, fêtes privées... Chaque occasion mérite une décoration unique.
+                            </p>
+                            <ul class="service-features">
+                                <li>Décoration thématique</li>
+                                <li>Centres de table festifs</li>
+                                <li>Arrangements sur mesure</li>
+                                <li>Compositions saisonnières</li>
+                                <li>Service de décoration</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="service-price">À partir de 150€</span>
+                                <button class="service-btn">En savoir plus</button>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">🏠</div>
+                                <div class="service-title-group">
+                                    <h3>Décoration Intérieure</h3>
+                                    <p class="service-subtitle">Votre espace sublimé</p>
+                                </div>
+                            </div>
+                            <p class="service-description">
+                                Transformez votre intérieur avec nos créations florales adaptées à votre style de vie.
+                            </p>
+                            <ul class="service-features">
+                                <li>Arrangements permanents</li>
+                                <li>Abonnement mensuel</li>
+                                <li>Consultation déco</li>
+                                <li>Plantes d'intérieur</li>
+                                <li>Compositions murales</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="service-price">À partir de 80€</span>
+                                <button class="service-btn">En savoir plus</button>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">✨</div>
+                                <div class="service-title-group">
+                                    <h3>Créations Artistiques</h3>
+                                    <p class="service-subtitle">Art floral d'exception</p>
+                                </div>
+                            </div>
+                            <p class="service-description">
+                                Pièces uniques et installations artistiques pour les collectionneurs et amateurs d'art.
+                            </p>
+                            <ul class="service-features">
+                                <li>Sculptures florales</li>
+                                <li>Installations monumentales</li>
+                                <li>Œuvres sur commande</li>
+                                <li>Expositions artistiques</li>
+                                <li>Collaborations créatives</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="service-price">Sur devis</span>
+                                <button class="service-btn">En savoir plus</button>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">⏰</div>
+                                <div class="service-title-group">
+                                    <h3>Services Express</h3>
+                                    <p class="service-subtitle">Réactivité garantie</p>
+                                </div>
+                            </div>
+                            <p class="service-description">
+                                Pour vos besoins urgents, nous proposons des créations express sans compromis sur la qualité.
+                            </p>
+                            <ul class="service-features">
+                                <li>Livraison en 2h</li>
+                                <li>Bouquets express</li>
+                                <li>Service d'urgence 24h</li>
+                                <li>Commande en ligne</li>
+                                <li>Dernière minute</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="service-price">À partir de 50€</span>
+                                <button class="service-btn">En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PAGE CONTACT -->
+        <div id="page-contact" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Contactez-nous</h1>
+                    <p class="page-subtitle">
+                        Nous sommes là pour écouter vos idées et transformer vos rêves floraux en réalité. 
+                        Partagez votre vision avec nous.
+                    </p>
+                </div>
+            </section>
+
+            <section class="contact-content">
+                <div class="container">
+                    <div class="contact-grid">
+                        <!-- Contact Form -->
+                        <div class="contact-form-section">
+                            <h2 class="contact-section-title">Parlez-nous de votre projet</h2>
+                            <form class="contact-form" id="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="prenom">Prénom *</label>
+                                        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nom">Nom *</label>
+                                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="telephone">Téléphone</label>
+                                    <input type="tel" id="telephone" name="telephone" placeholder="+33 1 23 45 67 89">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="type">Type de projet</label>
+                                    <select id="type" name="type">
+                                        <option value="">Sélectionnez un type</option>
+                                        <option value="mariage">Mariage</option>
+                                        <option value="evenement">Événement privé</option>
+                                        <option value="corporate">Événement corporatif</option>
+                                        <option value="decoration">Décoration intérieure</option>
+                                        <option value="artistique">Création artistique</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Votre message *</label>
+                                    <textarea id="message" name="message" placeholder="Décrivez-nous votre projet, vos attentes, votre budget indicatif..." rows="6" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="form-submit-btn">
+                                    <span>📧</span>
+                                    Envoyer le message
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="contact-info-section">
+                            <h2 class="contact-section-title">Nos coordonnées</h2>
+                            
+                            <div class="contact-info-grid">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">📍</div>
+                                    <div class="contact-info-content">
+                                        <h3>Adresse</h3>
+                                        <p>123 Rue des Fleurs<br>75015 Paris<br>France</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">📞</div>
+                                    <div class="contact-info-content">
+                                        <h3>Téléphone</h3>
+                                        <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">📧</div>
+                                    <div class="contact-info-content">
+                                        <h3>Email</h3>
+                                        <p><a href="mailto:contact@bellefleur.fr">contact@bellefleur.fr</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">⏰</div>
+                                    <div class="contact-info-content">
+                                        <h3>Horaires</h3>
+                                        <p>Lun-Ven: 9h-19h<br>Sam: 9h-18h<br>Dim: 10h-16h</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="social-section">
+                                <h3>Suivez-nous</h3>
+                                <div class="social-links">
+                                    <a href="#" class="social-link">📷</a>
+                                    <a href="#" class="social-link">📘</a>
+                                    <a href="#" class="social-link">🐦</a>
+                                </div>
+                            </div>
+
+                            <!-- Map Placeholder -->
+                            <div class="map-placeholder">
+                                <div class="map-content">
+                                    <div class="map-icon">📍</div>
+                                    <p>Plan interactif</p>
+                                    <small>123 Rue des Fleurs, Paris 15ème</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+	<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-col footer-left">
+        <h3>Quaie des Fleurs</h3>
+        <p>L'art floral d'exception à Paris et partout en France.</p>
+        <p><strong>Adresse :</strong> 123 Rue des Fleurs, 75000 Paris</p>
+        <p><strong>Tél :</strong> +33 1 23 45 67 89</p>
+        <p><strong>Email :</strong> contact@bellefleur.fr</p>
+      </div>
+      <div class="footer-col footer-center">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#" onclick="event.preventDefault(); navigateTo('accueil')">Accueil</a></li>
+          <li><a href="#" onclick="event.preventDefault(); navigateTo('portfolio')">Portfolio</a></li>
+          <li><a href="#" onclick="event.preventDefault(); navigateTo('atelier')">Atelier</a></li>
+          <li><a href="#" onclick="event.preventDefault(); navigateTo('services')">Services</a></li>
+          <li><a href="#" onclick="event.preventDefault(); navigateTo('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-right">
+        <h4>Mentions</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Quaie des Fleurs - Tous droits réservés</p>
+    </div>
+  </div>
+</footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+   
